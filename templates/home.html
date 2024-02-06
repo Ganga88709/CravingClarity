@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+		crossorigin="anonymous"></script>
+	<!--<link href="styles.css" rel="stylesheet">-->
+	<style>
+		.navbar{
+    background-color: purple;
+}
+.vishnu{
+    height:60px;
+    width: 60px;;
+}
+.Main{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:bolder;
+}
+.titleimg{
+    width:150%;
+    height:600px;
+}
+#about{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background-color: thistle;
+    padding-bottom:30px;
+}
+ul{
+    list-style: none;
+}
+
+.timeline{
+    padding:0px 100px;
+    position:relative;
+    width:100%
+}
+.timeline ul li{
+    position: relative;
+    width:50%;
+
+}
+.timeline::before{
+    content:'';
+    position: absolute;
+    height:80%;
+    width:4px;
+    background-color: black;
+    left:50%;
+    top:10%;
+}
+.timeline ul li:nth-child(odd){
+    float:left;
+    text-align: right;
+    clear:both;
+}
+.timeline ul li:nth-child(even){
+    float:right;
+    text-align:left;
+    clear:both;
+}
+.timeline ul li:nth-child(odd) .content{
+    margin-right: 120px;
+}
+.timeline ul li:nth-child(even) .content{
+    margin-left: 120px;
+}
+.timeline ul::after{
+    content:'';
+    display: table;
+    clear:both;
+}
+.timeline ul li:nth-child(odd)::before{
+    content:'';
+    position: absolute;
+    height: 150px;
+    width:150px;
+    background-color: black;
+    border-radius: 100%;
+    right:-60px;
+    top:50%;
+    transform:translate(0%,-50%);
+    border:4px solid #ffff
+
+}
+.timeline ul li:nth-child(even)::before{
+    content:'';
+    position: absolute;
+    height: 150px;
+    width:150px;
+    background-color: black;
+    border-radius: 100%;
+    left:-89px;
+    top:50%;
+    transform:translate(0%,-50%);
+    border:4px solid #ffff
+
+}
+.content{
+    padding:50px 0px;
+}
+
+.timeline ul li:nth-child(1)::before{
+    background-image:url(static/intro.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.timeline ul li:nth-child(2)::before{
+    background-image:url(static/flow.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.timeline ul li:nth-child(3)::before{
+    background-image:url(static/3.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.timeline ul li:nth-child(4)::before{
+    background-image:url(static/start.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+.content h2{
+    font-size: 25px;
+    /* margin-bottom: 1px; */
+}
+.content p{
+    font-size:14px;
+}
+#services{
+    padding-top: 70px;
+    background-color: rgb(246, 239, 239);
+}
+.img-circle{
+    margin-top: 50px;
+    height:180px;
+    width:180px;
+    border-radius: 30%;
+}
+#services{
+    padding-bottom: 30px;
+	background-color: thistle;
+}
+#title{
+    padding-bottom: 100px;
+	background-color: thistle;
+}
+#contact{
+    /* padding-top: 50px; */
+    /* background-image: url(img/contact-1.jpg);
+    background-repeat:no-repeat;
+	background-size: cover;
+    height:500px;
+    width:100% */
+	background-color: thistle;
+}
+
+	</style>
+
+</head>
+
+<body>
+	<section id="menu">
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-1 col-md-2 col-sm-2">
+					<img src="https://vishnu.edu.in/upload_news/newlogo.bmp" class="vishnu">
+				</div>
+
+				<div class="Main col-lg-11 col-md-10 col-sm-10" style="padding-top:25px">
+					<div class="row">
+						<div class="col-lg-10 col-lg-8 col-sm-8">
+							<h4>Shri Vishnu Engineering College For Women(Autonomous),Vishnupur, Bhimavaram</h4>
+						</div>
+
+						<!--<div class = "col-lg-3 col-md-3 col-sm-3"><img src="img/nacc and nba.jpg" style = "height:80px; width:100px;">-->
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<nav class="navbar navbar-expand-lg bg-body-tertiary">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#"></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+
+					<div class="navbar-nav">
+						
+							<a class="nav-link active" href="#about" style=" color:white">About</a>
+							<a class="nav-link active" href="#services" style=" color:white">Features</a>
+							<a class="nav-link active" href="#contact" style=" color:white">Contact Us</a>
+							<a class=" nav-link active" href="/run_streamlit" style="color:white">Craving Clarity</a>
+                        
+				</div>
+			</div>
+		</nav>
+		</div>
+	</section>
+	<div>
+		<section id="title">
+			<div class="container-fluid">
+				<div class="row">
+					<img src="static/clock2.jpg" class="titleimg">
+				</div>
+			</div>
+		</section>
+</div>
+
+
+	<section id="about">
+
+		<div class="container-fluid">
+			<div class="row">
+				<center>
+					<h2>About</h2>
+				</center>
+				<div class="timeline">
+					<ul class="list">
+						<li>
+							<div class="content">
+								<h2>Introduction</h2>
+								<p>Tired of confusion about calories and nutrition? 
+                                    Our free app unveils the "goodness" within your food, not just the numbers. Explore a user-friendly interface that simplifies understanding what you eat, 
+                                    empowering healthier choices. Dive in and discover a taste of better health!</p>
+							</div>
+						</li>
+						<li>
+							<div class="content">
+								<h2>How to proceed</h2>
+								<p>Open your dashboard: Click the top-left corner icon labeled "Craving Clarity."<br>
+									Capture or upload: Snap a pic of your food or select an image from your phone.<br>
+									Get food insights: Our AI analyzes the image to reveal hidden details.<br>
+									Make informed choices: See ingredients, calories, and carbs – all to empower your next bite!</p>
+							</div>
+						</li>
+						<li>
+							<div class="content">
+								<h2>Benifits</h2>
+								<p><b>Control weight</b>: Understanding calorie intake, you can adjust diet to manage weight<br><br>
+                                    <!-- <b>Create balanced meals</b>: Knowing nutrient ratios helps you build balanced meals with adequate proteins,
+									 carbohydrates, and healthy fats.<br><br> -->
+									 <b>Manage health conditions</b>: People with certain health conditions may need to monitor specific nutrients like
+									 carbohydrates or fats to manage health.
+                                    </p>
+							</div>
+						</li>
+						<!-- <li>
+							<div class="content">
+							</div>
+						</li> -->
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="services" class="bg-light-gray">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2 class="section-heading">Features</h2>
+					<!-- <h3 class="section-subheading text-muted">The time table we
+						generate is loaded with unique features.</h3> -->
+				</div>
+			</div>
+			<div class="row text-center">
+				<div class="col-md-4">
+					<img src="static/student.png" class="img-circle" alt="user-friendly" width="250" height="250">
+
+					<h4 class="service-heading">Nutrient Spotlight</h4>
+					<p class="text-muted">Get detailed info of protein, fat
+						and key nutrients in your food</p>
+				</div>
+				<div class="col-md-4">
+					<img src="static/teacher-friendly.jpg" class="img-circle" alt="Teacher-friendly" width="250"
+						height="250">
+					<h4 class="service-heading">Age-Wise Guidance</h4>
+					<p class="text-muted">Know if a dish aligns with your specific needs based on your unique age group.</p>
+				</div>
+				<div class="col-md-4">
+					<img src="static/file.png" class="img-circle" alt="Pdf-format" width="250" height="250">
+
+					<h4 class="service-heading">Balanced Diet Suggestions</h4>
+					<p class="text-muted">Get personalized suggestions for complementary foods
+						 to create a well-rounded and satisfying meal.</p>
+				</div>
+
+				<div class="col-md-4">
+					<img src="static/ecommerce.png" class="img-circle" alt="student-friendly" width="250" height="250">
+
+					<h4 class="service-heading">Fully Online</h4>
+					<p class="text-muted">This is fully online software and no
+						download is required.</p>
+				</div>
+				<div class="col-md-4">
+					<img src="static/user_friendly.png" class="img-circle" alt="student-friendly" width="250" height="250">
+
+					<h4 class="service-heading">User-friendly Interface</h4>
+					<p class="text-muted">This is extremely easy to use software
+						and anyone with basic knowledge of computer can use it.</p>
+				</div>
+				<div class="col-md-4">
+					<img src="static/support.png" class="img-circle" alt="student-friendly" width="250" height="250">
+
+					<h4 class="service-heading">Amazing Support</h4>
+					<p class="text-muted">We provide technical and non-technical
+						support at any step you are stuck.</p>
+				</div>
+
+
+			</div>
+		</div>
+	</section>
+
+	<section id="contact">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2 class="section-heading">Contact Us</h2><br><br>
+					<h3 class="section-subheading text-muted">For any help or
+						queries you can always contact us.</h3><br>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<form name="sentMessage" id="contactForm" novalidate>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Your Name *" id="name" required
+										data-validation-required-message="Please enter your name." style="margin-left: 400px;">
+									<p class="help-block text-danger"></p>
+								</div><br>
+								<div class="form-group">
+									<input type="email" class="form-control" placeholder="Your Email *" id="email"
+										required data-validation-required-message="Please enter your email address." style="margin-left: 400px;">
+									<p class="help-block text-danger"></p>
+								</div><br>
+								<div class="form-group">
+									<input type="tel" class="form-control" placeholder="Your Phone *" id="phone"
+										required data-validation-required-message="Please enter your phone number." style="margin-left: 400px;">
+									<p class="help-block text-danger"></p>
+								</div><br>
+								<div class="form-group">
+									<textarea class="form-control" placeholder="Your Message *" id="message" required
+										data-validation-required-message="Please enter a message." style="margin-left: 400px;"></textarea>
+									<p class="help-block text-danger"></p>
+								</div><br>
+							</div>
+							<!-- <div class="col-md-6">
+								<div class="form-group">
+									<textarea class="form-control" placeholder="Your Message *" id="message" required
+										data-validation-required-message="Please enter a message."></textarea>
+									<p class="help-block text-danger"></p>
+								</div>
+							</div> -->
+							<div class="clearfix"></div>
+							<div class="col-lg-12 text-center">
+								<div id="success"></div>
+								<button type="submit" class="btn btn-xl btn-warning">Send Message</button><br><br><br><br>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-4">
+					<ul class="list-inline social-buttons">
+						<li><i class="  fa-brands fa-facebook"></i>
+						<li><i class=" fa-brands fa-twitter"></i>
+							<i class="fa-brands fa-linkedin"></i>
+					</ul>
+				</div>
+			</div>
+		</div>
+</body>
+
+</html>
